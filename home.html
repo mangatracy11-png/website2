@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tracy's Delicacy | Authentic Cameroonian Cuisine</title>
+<style>
+    #info{
+        display: flex;
+        align-items: center;
+        background-color: #3d291d;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        color: azure;
+        height: 50px;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 20px;
+    }
+    #logo{
+        border-radius: 200px;
+        width: 80px;
+        height: 80px;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+         gap: 40px;
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 20px;
+        font-weight: 600;
+        color: black;
+    }
+    .navbar{
+      display: flex;
+      align-items: center;
+      width: 90%;
+      gap: 30px;
+      max-width: 1200px;
+      justify-content: space-between;
+
+      nav a{
+        color: black;
+        text-decoration: none;
+      }
+    }
+     header {
+            background-color: #fffaf3;
+        }
+    .hero-subtitle{
+       color: lightpink;
+            font-size: 35px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+    }
+    h1{
+        color: lightpink;
+        font-size: 60px;
+        font-weight: bold;
+        justify-items: center;
+    }
+    .hero-content p{
+      justify-items: center;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.6;
+      color: lightpink;
+      font-weight: bold;
+      font-size: 20px
+    }
+    .hero-content{
+            padding: 80px 20px;
+        justify-items: center;
+         background:
+                linear-gradient(
+                    rgba(45, 29, 19, 0.55),
+                    rgba(45, 29, 19, 0.55)
+                ),
+                url("jellof.png") center/cover no-repeat;
+    
+    }
+    .hero-button{
+        padding: 13px 28px;
+        background-color: #b56a2b;
+        color: white;
+        text-decoration: none; 
+        border-radius: 4px;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+      
+    }
+    .hero-button:hover{
+         background-color: #8c4e20;
+    }
+    .hero-content a{
+        display: block;
+    }
+    .section-title h2{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 50px;
+      display: flex;
+      justify-content: center;
+    }
+    .section-title p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+         display: flex;
+      justify-content: center;
+    }
+    .food-images{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 15px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .food-card{
+        position: relative;
+        height: 400px;
+        overflow: hidden;
+    }
+    .food-card img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-right: 500px;
+    }
+    .food-card h3{
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+        color: white;
+        font-size: 20px;
+    }
+    #Menu {
+            background-color: #ffffff;
+    }
+    .food-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .food-name {
+            position: absolute;
+            font-size: larger;
+            font-weight: bold;
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+
+            padding: 15px;
+
+            background-color: white
+            
+        }
+    #About {
+    background-color: antiquewhite;
+    }
+    .story {
+            max-width: 950px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .story p {
+            font-size: 19px;
+            color: #5d5148;
+            margin-bottom: 25px;
+        }
+        .values {
+            background-color: #f4eadc;
+        }
+        .values-container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 25px;
+            max-width: 1100px;
+        }
+        
+        .value-card {
+            background-color: #ffffff;
+            padding: 30px 22px;
+            text-align: center;
+            border-radius: 5px;
+            margin-left: 30px;
+            padding-bottom: 30px;
+            height: 50%;
+            padding-left: 30px;
+            
+        }
+        .value-card h3 {
+            color: #3d291d;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .value-card p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #6f6259;
+        }
+     #Contact {
+            background-color: #3d291d;
+            color: white;
+            text-align: center;
+        }
+        #Contact .section-label {
+            color: #f0c58a;
+        }
+
+        #Contact .section-title h2 {
+            color: white;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        .contact-box {
+            padding: 20px;
+        }
+
+        .contact-box h3 {
+            color: #f0c58a;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .contact-box p {
+            font-family: Arial, sans-serif;
+            color: #eee;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .contact-box a {
+            color: #f0c58a;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact-box a:hover {
+            color: white;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .socials a {
+            color: #f0c58a;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .socials a:hover {
+            color: white;
+        }
+        footer {
+            background-color: #241810;
+            color: #cfc4ba;
+            text-align: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+</style>
+<body>
+
+    <div id="info">
+        <span>📍 Yaoundé, Etoudi</span>
+        <span>🕐 Daily 8am - 11pm</span>
+        <span>📞 652 545 973</span>
+        <span>✉ mangatracy11@gmail.com</span>
+    </div>
+    <header>
+        <div class="navbar">
+            <img
+                id="logo"
+                src="logo.jpg"
+                alt="Tracy's Delicacy Logo"
+            >
+            <nav>
+                <a href="#Home">Home</a>
+                <a href="#Menu">Menu</a>
+                <a href="#About">About</a>
+                <a href="#Contact">Contact</a>
+            </nav>
+
+        </div>
+
+    </header>
+    <main>
+        <section class="hero" id="Home">
+            <div class="hero-content">
+                <p class="hero-subtitle">
+                    Royalty Flavors
+                </p>
+                <h1>
+                    We Offer Top Notch
+                    Cameroonian Cuisine
+                </h1>
+
+                <p id="s">
+                    Fresh, locally sourced ingredients and recipes
+                    passed through generations. From breakfast and
+                    traditional dishes to refreshing drinks, every
+                    meal is prepared with care.
+                </p>
+
+                <a href="#Menu" class="hero-button">
+                    Explore Our Menu
+                </a>
+            </div>
+        </section>
+        <section id="Menu">
+            <div class="section-title">
+                <h2>
+                    Taste Cameroon
+                </h2>
+                <p>
+                    Discover authentic flavors prepared with fresh
+                    ingredients and traditional cooking methods.
+                </p>
+
+            </div>
+
+
+            <div class="food-images">
+                
+                <div class="food-card">
+                    <img
+                        src="https://d34vm3j4h7f97z.cloudfront.net/original/4X/d/6/d/d6d63a7af2ba0d60a1d5a2b05953ce7fa5d05f6a.jpeg"
+                        alt="Traditional Cameroonian dish"
+                    >
+
+                    <div class="food-name">
+                        Traditional Delicacy
+                    </div>
+
+                </div>
+                <div class="food-card">
+
+                    <img
+                        src="https://i0.wp.com/afrovitalityeats.com/wp-content/uploads/2018/06/Cameroon-Ndole-dish.jpg?ssl=1"
+                        alt="Cameroonian Ndole"
+                    >
+
+                    <div class="food-name">
+                        Ndole
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img
+                        src="jellof.png"
+                        alt="Jellof rice"
+                    >
+                    <div class="food-name">
+                        Jollof Rice
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img
+                        src="https://www.preciouscore.com/wp-content/uploads/2015/09/Cameroonian-Snails-Recipe.jpg"
+                        alt="Cameroonian snails"
+                    >
+                    <div class="food-name">
+                        Cameroonian Snails
+                    </div>
+            </div>
+        </section>
+        <section id="About">
+            <div class="section-title">
+                <p class="section-label">
+                    Our Story
+                </p>
+                <h2>
+                    Food Is More Than a Meal
+                </h2>
+            </div>
+            <div class="story">
+                <p>
+                    At Tracy's Delicacy, we believe that food is more
+                    than a meal — it is a memory.
+                </p>
+                <p>
+                    Every dish brings together authentic Cameroonian
+                    flavors, fresh ingredients and the warmth of home.
+                    Our goal is to give every guest an experience that
+                    feels familiar, delicious and unforgettable.
+                </p>
+            </div>
+        </section>
+        <section class="values">
+            <div class="section-title">
+                <p class="section-label">
+                    Why Choose Us
+                </p>
+                <h2>
+                    The Tracy's Delicacy Experience
+                </h2>
+            </div>
+            <div class="values-container">
+                <div class="value-card">
+                    <h3>
+                        Local Sourcing
+                    </h3>
+                    <p>
+                        Fresh ingredients carefully selected from
+                        local Cameroonian markets and farms.
+                    </p>
+                </div>
+             <div class="value-card">
+                    <h3>
+                        Traditional Recipes
+                    </h3>
+                    <p>
+                        Authentic recipes inspired by generations
+                        of Cameroonian cooking.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <h3>
+                        Warm Hospitality
+                    </h3>
+                    <p>
+                        Every guest is welcomed and treated like
+                        family.
+                    </p>
+                </div>
+            <div class="value-card">
+                    <h3>
+                        Open Kitchen
+                    </h3>
+                    <p>
+                        Honest food, fresh flavors and nothing
+                        to hide.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="Contact">
+            <div class="section-title">
+                <p class="section-label">
+                    Get In Touch
+                </p>
+                <h2>
+                    Visit Tracy's Delicacy
+                </h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-box">
+                    <h3>
+                        Location
+                    </h3>
+                    <p>
+                        Etoudi, Yaoundé
+                    </p>
+                    <p>
+                        Centre Region, Cameroon
+                    </p>
+                </div>
+                <div class="contact-box">
+                    <h3>
+                        Phone
+                    </h3>
+                    <p>
+                        <a href="tel:+237652545973">
+                            +237 652 545 973
+                        </a>
+                    </p>
+                </div>
+                <div class="contact-box">
+                    <h3>
+                        Email
+                    </h3>
+                    <p>
+                        <a href="mailto:mangatracy11@gmail.com">
+                            mangatracy11@gmail.com
+                        </a>
+                    </p>
+                </div>
+                <div class="contact-box">
+                    <h3>
+                        Opening Hours
+                    </h3>
+                    <p>
+                        Monday - Sunday
+                    </p>
+                    <p>
+                        8am - 11pm
+                    </p>
+                </div>
+            </div>
+            <div class="socials">
+                <a href="#">
+                    Facebook
+                </a>
+                <a href="#">
+                    Instagram
+                </a>
+                <a href="#">
+                    YouTube
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+       <span>&copy;2026 Tracy's Delicacy.</span> 
+        All Rights Reserved.
+    </footer>
+
+</body>
+</html>
